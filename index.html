@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Attendance Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Student Attendance Management System</h1>
+
+        <div class="form-section">
+
+            <label>Student ID</label>
+            <input type="text" id="studentId" placeholder="Enter Student ID">
+
+            <label>Student Name</label>
+            <input type="text" id="studentName" placeholder="Enter Student Name">
+
+            <label>Attendance Status</label>
+            <select id="status">
+                <option value="">Select Status</option>
+                <option value="Present">Present</option>
+                <option value="Absent">Absent</option>
+            </select>
+
+            <button onclick="addAttendance()">Add Attendance</button>
+
+        </div>
+
+        <h2>Attendance Records</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Student ID</th>
+                    <th>Student Name</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+
+            <tbody id="attendanceTable">
+            </tbody>
+        </table>
+
+        <div class="summary">
+            <p>Present: <span id="presentCount">0</span></p>
+            <p>Absent: <span id="absentCount">0</span></p>
+            <p>Attendance: <span id="percentage">0%</span></p>
+        </div>
+
+        <p id="message"></p>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
