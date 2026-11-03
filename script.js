@@ -12,7 +12,15 @@ function addAttendance() {
 
         return;
     }
+const duplicate = attendanceRecords.some(function(record) {
+    return record.id === studentId;
+});
 
+if (duplicate) {
+    document.getElementById("message").textContent =
+        "Attendance already recorded for this student.";
+    return;
+}
     attendanceRecords.push({
         id: studentId,
         name: studentName,
